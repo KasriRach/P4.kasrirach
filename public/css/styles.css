@@ -1,0 +1,579 @@
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+
+#container {
+  background-color: white;
+}
+/* ----------------------- Titre -------------------------------- */
+h1,
+h2 {
+  text-align: center;
+  color: #2e3841;
+}
+h1 {
+  margin-top: 100px;
+}
+h3 {
+  font-size: 1.3em;
+  text-align: center;
+}
+h4 {
+  text-align: right;
+}
+/*h5 {
+  font-size: 1em;
+  color: #2e3841;
+}*/
+
+/* ----------------------- DIAPORAMA -------------------------------- */
+#slideshow {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container-slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#slider {
+  display: flex;
+  width: 300%;
+  height: auto;
+  transition: 1s;
+  animation: 19s slide infinite;
+}
+
+.img-slide {
+  width: 100%;
+  height: auto;
+}
+
+#slider img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+@keyframes slide {
+  0%,
+  30%,
+  100% {
+    transform: translateX(0);
+  }
+  40%,
+  60% {
+    transform: translateX(-33.33%);
+  }
+  70%,
+  90% {
+    transform: translateX(-66.66%);
+  }
+}
+
+/* ---------------------- Titre dans le slider ------------------------- */
+.title {
+  position: relative;
+  top: -450px;
+  z-index: 10;
+  color: white;
+}
+.title-book,
+h2 {
+  color: white;
+  font-size: 1.9em;
+}
+
+/*.add_article {
+  margin: 100px auto;
+}*/
+
+/* ---------------------- Responsive Design ------------------------- */
+@media screen and (max-width: 426px) {
+  .title {
+    top: -30px;
+  }
+  .title-book,
+  h2 {
+    color: white;
+    font-size: 1.1em;
+  }
+  .title,
+  h3 {
+    font-size: 0.9em;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    top: -350px;
+  }
+  .title-book,
+  h2 {
+    color: white;
+    font-size: 1.3em;
+  }
+  .title,
+  h3 {
+    font-size: 1em;
+    color: white;
+  }
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    top: -550px;
+  }
+  .title-book,
+  h2 {
+    color: white;
+    font-size: 1.9em;
+  }
+  .title,
+  h3 {
+    font-size: 1.2em;
+    color: white;
+  }
+}
+
+/* --------------------------- chapter --------------------------- */
+/*#chapitres {
+  margin-top: -100px;
+  background-color: steelblue;
+}*/
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/*.news1 {
+  width: 100%;
+  height: auto;
+  margin: 5%;
+  text-align: justify;
+}*/
+.last-chapter h2 {
+  color: #2e3841;
+}
+.add_article {
+  float: left;
+  text-align: justify;
+  padding: 50px;
+  margin: auto;
+}
+.adm {
+  display: none;
+}
+
+.news {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #969ca1;
+  width: 350px;
+  height: auto;
+  margin: auto;
+}
+.news h3 {
+  color: #2e3841;
+}
+.single {
+  text-align: justify;
+  padding: 50px;
+  margin: auto;
+}
+/* ---------------------- Responsive Design ------------------------- */
+@media screen and (max-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1440px) {
+}
+
+/* --------------------------- BIOGRAPHY --------------------------- */
+
+#bio {
+  align-items: center;
+  padding-bottom: 100px;
+  margin-top: -100px;
+}
+#bio h2 {
+  color: #2e3841;
+}
+.head-bio {
+  width: 42%;
+  float: right;
+}
+
+.text-bio {
+  color: #2e3841;
+  text-align: justify;
+  padding: 10px;
+  width: 50%;
+
+  margin: auto;
+}
+/* ---------------------- Responsive Design ------------------------- */
+@media screen and (max-width: 426px) {
+  .text-bio {
+    width: 90%;
+    margin: auto;
+  }
+  .head-bio img {
+    width: 100%;
+    float: none;
+  }
+  #bio h2 {
+    margin-top: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .text-bio {
+    width: 80%;
+    margin: auto;
+  }
+  .head-bio {
+    width: 42%;
+    float: right;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .text-bio {
+    width: 80%;
+    margin: auto;
+  }
+  .head-bio {
+    width: 35%;
+    float: right;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .text-bio {
+    width: 80%;
+    margin: auto;
+  }
+  .head-bio {
+    width: 28%;
+    float: right;
+  }
+}
+
+/* ----------------------- NAV -------------------------------- */
+a {
+  text-decoration: none;
+  color: blue;
+}
+.billet1 {
+  display: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  top: 0;
+  background-color: #2e3841;
+  z-index: 200;
+}
+#menu ul {
+  display: flex;
+  margin-top: 30px;
+  font-size: 1.3em;
+}
+#menu ul li {
+  padding-right: 20px;
+  list-style: none;
+}
+#menu a {
+  color: white;
+}
+#menu {
+  float: right;
+}
+.btn-navigation {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  z-index: 20;
+  cursor: pointer;
+}
+.btn-navigation .barre {
+  width: 30px;
+  height: 3px;
+  background: red;
+  margin-top: 3px;
+
+  transition: background 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+}
+.btn-navigation .barre.white {
+  background: white;
+}
+.navigation {
+  position: fixed;
+  right: 0;
+  padding: 0 30px;
+  background:  #2e3841;
+  width: 25%;
+  height: 100%;
+  list-style: none;
+
+  transition: transform 0.6s ease-in-out;
+  -webkit-transition: transform 0.6s ease-in-out;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+}
+.navigation.isOpen {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+}
+.navigation ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  list-style: none;
+  margin-left: -40px;
+}
+.navigation ul li {
+  margin: 10px 0;
+}
+.navigation ul li a {
+  text-transform: uppercase;
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+/* ---------------------- Responsive Design ------------------------- */
+
+@media screen and (max-width: 426px) {
+  #menu ul {
+    display: flex;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+  .billet,
+  .nava,
+  .navb,
+  .navc,
+  .navd,
+  .nave {
+    display: none;
+  }
+  .billet1 {
+    display: block;
+  }
+  .btn-navigation {
+    right: 10px;
+    top: 10px;
+  }
+  .navigation {
+    padding: 10px;
+    width: 0%;
+    height: 0%;
+    text-decoration: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #menu ul {
+    display: flex;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+  .billet1 {
+    display: block;
+  }
+  .billet {
+    display: none;
+  }
+  .navigation {
+    padding: 10px;
+    width: 30%;
+    height: 100%;
+    text-decoration: none;
+  }
+  .btn-navigation {
+    right: 30px;
+    top: 10px;
+  }
+  .navigation ul li a {
+    font-size: 10px;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+  }
+  .navigation {
+    padding: 10px;
+  }
+  .navigation ul {
+    margin-left: -39px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .billet1 {
+    display: none;
+  }
+  .btn-navigation {
+    right: 40px;
+    top: 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #menu ul {
+    display: flex;
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+
+  .billet1 {
+    display: none;
+  }
+}
+/* ------------------------ bouton------------------------------- */
+/*button a {
+  color: #2e3841;
+  border-radius: 5px;
+}
+
+.button-post {
+  padding: 10px;
+  border: 1px solid #f5c5c5;
+  border-radius: 15px;
+  width: 220px;
+  margin: 0px 13%;
+  box-shadow: 1px 1px 1px #d83f3d;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+}*/
+/* ------------------------ FORMULAIRE ------------------------------- */
+form {
+  color: #2e3841;
+  background-color: white;
+  padding: 10px;
+  width: 280px;
+  border-radius: 5px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #f5c5c5;
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 1px 1px 2px #c0c0c0 inset;
+}
+
+.submit {
+  padding: 10px;
+  border: 1px solid #f5c5c5;
+  border-radius: 15px;
+  width: 220px;
+  box-shadow: 1px 1px 1px #d83f3d;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+}
+
+/*.title-comment h2 {
+  color: #2e3841;
+}*/
+
+.comment_article {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #969ca1;
+  padding: 5px;
+}
+.supprime,
+.designale {
+  padding: 10px;
+  border: 1px solid #f5c5c5;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 1px 1px 1px #d83f3d;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+}
+
+/*#comments, footer{
+  width: 100%;
+  height: 100px;
+ }*/
+/*.author-comment {
+  padding: 3px;
+  border: 1px solid #f5c5c5;
+  border-radius: 5px;
+  width: 30%;
+  box-shadow: 1px 1px 2px #c0c0c0 inset;
+}
+
+.date-comment {
+  margin: 10px;
+
+  padding: 3px;
+  border: 1px solid #f5c5c5;
+  border-radius: 5px;
+  width: 280px;
+  box-shadow: 1px 1px 2px #c0c0c0 inset;
+}
+*/
+
+
+
+.profil {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #969ca1;
+  padding: 5px;
+  width: 350px;
+  margin-top: 200px;
+}
+.login {
+  margin: auto;
+}
+/* ------------------------ user table------------------------------- */
+/*.commentaire_signale {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.connected {
+  visibility: hidden;
+}*/
+
+table {
+  border-collapse: collapse;
+}
+td, th /* Mettre une bordure sur les td ET les th */ {
+  border: 1px solid black;
+}
+/* ------------------------ FOOTER ------------------------------- */
+footer {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100px;
+  background-color: #2e3841;
+  position: relative;
+  bottom: 0;
+  z-index: 2;
+  color: #fff;
+}
+
+footer p {
+  text-align: center;
+  position: relative;
+  top: 40%;
+}
