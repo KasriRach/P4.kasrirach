@@ -1,6 +1,5 @@
 <?php $this->title = "Connexion"; ?>
 
-<?= $this->session->show('error_login'); ?>
 <div class="login">
     <h1>Connexion</h1>
 
@@ -17,6 +16,7 @@
         <br>
         <p class="box_register">Vous êtes nouveau ici? <a href="../public/index.php?route=register">S'inscrire</a></p>
     </form>
+    <?= $this->session->show('error_login'); ?>
 
 
 </div>

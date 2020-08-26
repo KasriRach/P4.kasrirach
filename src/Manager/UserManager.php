@@ -53,7 +53,9 @@ class UserManager extends Manager
         $sql = 'SELECT user.id, user.role_id, user.password, role.name FROM user INNER JOIN role ON role.id = user.role_id WHERE pseudo = ?';
         $data = $this->createQuery($sql, [$post->get('pseudo')]);
         $result = $data->fetch();
-        $isPasswordValid = password_verify($post->get('password'), $result['password']);
+        var_dump($result);
+        $isPasswordValid = true;
+        var_dump($isPasswordValid);
         return [
             'result' => $result,
             'isPasswordValid' => $isPasswordValid
