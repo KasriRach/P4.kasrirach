@@ -12,12 +12,12 @@
 
 <div id="comments">
     <?php include('form_comment.php'); ?>
-    <h3>Commentaires</h3>
+    
     <?php
     foreach ($comments as $comment)
     {
         ?>
-     <div class="comment_article"><img src="../public/images/imgNEW1.jpg" alt="" width="100%">   
+     <div class="comment_article"><img src="../public/images/imgNEW1.jpg" alt="">   
     <h4><?= htmlspecialchars($comment->getPseudo());?></h4>
     <p><?= nl2br(htmlspecialchars_decode($comment->getContent()));?></p>
     <p>Posté le <?= htmlspecialchars($comment->getCreatedAt());?></p><br></div><br>  

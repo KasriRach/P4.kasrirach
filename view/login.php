@@ -5,12 +5,12 @@
 
     <form method="post" action="../public/index.php?route=login">
         <br>
-        <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" require
+        <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" required
             value="<?= isset($post) ? htmlspecialchars($post->get('pseudo')): ''; ?>"><br>
         <?= isset($errors['pseudo']) ? $errors['pseudo'] : ''; ?>
         <br>
 
-        <input type="password" id="password" name="password" placeholder="Mot de passe" require><br>
+        <input type="password" id="password" name="password" placeholder="Mot de passe" required><br>
         <?= isset($errors['password']) ? $errors['password'] : ''; ?><br>
         <input class="submit" type="submit" value="Connexion" id="submit" name="submit">
         <br>

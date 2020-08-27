@@ -96,7 +96,7 @@ h2 {
 /* ---------------------- Responsive Design ------------------------- */
 @media screen and (max-width: 426px) {
   .title {
-    top: -30px;
+    top: -150px;
   }
   .title-book,
   h2 {
@@ -461,7 +461,7 @@ form {
   color: #2e3841;
   background-color: white;
   padding: 10px;
-  width: 280px;
+ 
   border-radius: 5px;
 }
 
@@ -469,7 +469,7 @@ input {
   padding: 10px;
   border: 1px solid #f5c5c5;
   border-radius: 15px;
-  width: 200px;
+  width: 250px;
   box-shadow: 1px 1px 2px #c0c0c0 inset;
 }
 
@@ -477,7 +477,7 @@ input {
   padding: 10px;
   border: 1px solid #f5c5c5;
   border-radius: 15px;
-  width: 220px;
+  width: 270px;
   box-shadow: 1px 1px 1px #d83f3d;
   background-color: red;
   cursor: pointer;
@@ -494,6 +494,7 @@ input {
   border-radius: 8px;
   border: 2px solid #969ca1;
   padding: 5px;
+  width: 350px;
 }
 .supprime,
 .designale {
@@ -507,9 +508,9 @@ input {
   color: white;
 }
 
-/*#comments, footer{
-  width: 100%;
-  height: 100px;
+#comments{
+  margin: 0;
+  
  }*/
 /*.author-comment {
   padding: 3px;

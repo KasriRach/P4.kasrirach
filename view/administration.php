@@ -12,7 +12,7 @@
     <h1>Derniers chapitres</h1>
     
     
-    <h2><a href="../public/index.php?route=addArticle">Nouvel article</a></h2>
+    <h2><a href="../public/index.php?route=addArticle">Nouveau chapitre</a></h2>
    
 
 
@@ -21,7 +21,7 @@
     {
         ?>
 
-    <?= htmlspecialchars($article->getId());?></h3>
+    <!--<?= htmlspecialchars($article->getId());?></h3>-->
     <a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a>
     <p><?= nl2br(substr(htmlspecialchars_decode($article->getContent()), 0, 50000));?></p>
     <p><?= htmlspecialchars($article->getAuthor());?></p>
@@ -29,7 +29,7 @@
 
     <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a><br>
     <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a><br>
-
+     <br>   
 
 <?php
     }
