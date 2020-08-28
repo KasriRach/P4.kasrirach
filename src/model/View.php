@@ -19,7 +19,7 @@ class View
 
     public function render($template, $data = [])
     {
-        $this->file = '../view/'.$template.'.php';
+        $this->file = '../view/' . $template . '.php';
         $content  = $this->renderFile($this->file, $data);
         $view = $this->renderFile('../view/base.php', [
             'title' => $this->title,
@@ -31,7 +31,7 @@ class View
 
     private function renderFile($file, $data)
     {
-        if(file_exists($file)){
+        if (file_exists($file)) {
             extract($data);
             ob_start();
             require $file;

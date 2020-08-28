@@ -1,6 +1,5 @@
 <?php $this->title = 'Accueil'; ?>
 
-
 <div class="container-slider">
     <div id="slider">
         <div class="img-slide"><img src="../public/images/3b.jpg" alt=""></div>
@@ -12,7 +11,6 @@
     <h2 class="title-book">Billet simple pour l'Alaska</h2>
     <h3>Un Roman écrit par Jean Forteroche.</h3>
 </div>
-
 
 <section id="bio">
     <div class="adm">
@@ -27,24 +25,6 @@
         <?= $this->session->show('logout'); ?>
         <?= $this->session->show('delete_account'); ?>
 
-
-        <?php
-        if ($this->session->get('pseudo')) {
-            ?>
-        <a href="../public/index.php?route=logout">Déconnexion</a>
-        <a href="../public/index.php?route=profile">Profil</a>
-        <?php if($this->session->get('role') === 'admin') { ?>
-        <a href="../public/index.php?route=administration">Administration</a>
-        <?php } ?>
-
-        <?php
-        } else {
-            ?>
-        <a href="../public/index.php?route=register">Inscription</a>
-        <a href="../public/index.php?route=login">Connexion</a>
-        <?php
-        }
-        ?>
 
     </div>
 
@@ -80,43 +60,36 @@
     <div class="last-chapter">
         <h2>Derniers chapitres</h2>
     </div>
-
 </section>
 
 <?php
-foreach ($articles as $article)
-{
-    ?>
+foreach ($articles as $article) {
+?>
 <div class="news"><img src="../public/images/imgNEW1.jpg" alt="" width="100%">
-
-
-
 
     <h3>
         <a
-            href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a>
+            href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()); ?>"><?= htmlspecialchars($article->getTitle()); ?></a>
     </h3>
-    <p><?php  $string = nl2br(htmlspecialchars_decode($article->getContent()));
-    
-         // strip tags to avoid breaking any html
-$string = strip_tags($string);
+    <p><?php $string = nl2br(htmlspecialchars_decode($article->getContent()));
 
-if (strlen($string) > 50) {
+            // strip tags to avoid breaking any html
+            $string = strip_tags($string);
 
-    // truncate string
-    $stringCut = substr($string, 0, 90);
-    $endPoint = strrpos($stringCut, ' ');
+            if (strlen($string) > 50) {
 
-    //if the string doesn't contain any space then it will cut without Word basis.
-    $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-    
-}
-echo $string. '...' ;   
-        ?></p>
-    <p><?= htmlspecialchars($article->getAuthor());?></p>
-    <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+                // truncate string
+                $stringCut = substr($string, 0, 90);
+                $endPoint = strrpos($stringCut, ' ');
+
+                //if the string doesn't contain any space then it will cut without Word basis.
+                $string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+            }
+            echo $string . '...';
+            ?></p>
+    <p><?= htmlspecialchars($article->getAuthor()); ?></p>
+    <p>Créé le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
 </div>
-
 
 <br>
 <?php

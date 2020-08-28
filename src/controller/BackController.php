@@ -21,9 +21,9 @@ class BackController extends Controller
 
     public function addArticle(Parameter $post)
     {
-        if($post->get('submit')) {
+        if ($post->get('submit')) {
             $errors = $this->validation->validate($post, 'Article');
-            if(!$errors) {
+            if (!$errors) {
                 $this->articleManager->addArticle($post, $this->session->get('id'));
                 $this->session->set('add_article', 'Le nouvel article a bien été ajouté');
                 header('Location: ../public/index.php?route=administration');
@@ -39,9 +39,9 @@ class BackController extends Controller
     public function editArticle(Parameter $post, $articleId)
     {
         $article = $this->articleManager->getArticle($articleId);
-        if($post->get('submit')) {
+        if ($post->get('submit')) {
             $errors = $this->validation->validate($post, 'Article');
-            if(!$errors) {
+            if (!$errors) {
                 $this->articleManager->editArticle($post, $articleId, $this->session->get('id'));
                 $this->session->set('edit_article', 'L\' article a bien été modifié');
                 header('Location: ../public/index.php?route=administration');
@@ -50,7 +50,6 @@ class BackController extends Controller
                 'post' => $post,
                 'errors' => $errors
             ]);
-
         }
         $post->set('id', $article->getId());
         $post->set('title', $article->getTitle());
@@ -90,7 +89,7 @@ class BackController extends Controller
 
     public function updatePassword(Parameter $post)
     {
-        if($post->get('submit')) {
+        if ($post->get('submit')) {
             $this->userManager->updatePassword($post, $this->session->get('pseudo'));
             $this->session->set('update_password', 'Le mot de passe a été mis à jour');
             header('Location: ../public/index.php?route=profile');
@@ -120,7 +119,7 @@ class BackController extends Controller
     {
         $this->session->stop();
         $this->session->start();
-        if($param === 'logout') {
+        if ($param === 'logout') {
             $this->session->set($param, 'À bientôt');
         } else {
             $this->session->set($param, 'Votre compte a bien été supprimé');

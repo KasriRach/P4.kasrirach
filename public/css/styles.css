@@ -2,7 +2,6 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-
 #container {
   background-color: white;
 }
@@ -22,10 +21,6 @@ h3 {
 h4 {
   text-align: right;
 }
-
-
-
-
 
 /* ----------------------- DIAPORAMA -------------------------------- */
 #slideshow {
@@ -89,10 +84,6 @@ h2 {
   font-size: 1.9em;
 }
 
-
-
-
-
 /* ---------------------- Responsive Design ------------------------- */
 @media screen and (max-width: 426px) {
   .title {
@@ -144,22 +135,12 @@ h2 {
 }
 
 /* --------------------------- chapter --------------------------- */
-/*#chapitres {
-  margin-top: -100px;
-  background-color: steelblue;
-}*/
 .content {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-/*.news1 {
-  width: 100%;
-  height: auto;
-  margin: 5%;
-  text-align: justify;
-}*/
 .last-chapter h2 {
   color: #2e3841;
 }
@@ -169,9 +150,9 @@ h2 {
   padding: 50px;
   margin: auto;
 }
-.adm {
-  display: none;
-}
+
+
+
 
 .news {
   background-color: #fff;
@@ -322,7 +303,7 @@ header {
   position: fixed;
   right: 0;
   padding: 0 30px;
-  background:  #2e3841;
+  background: #2e3841;
   width: 25%;
   height: 100%;
   list-style: none;
@@ -440,28 +421,12 @@ header {
   }
 }
 /* ------------------------ bouton------------------------------- */
-/*button a {
-  color: #2e3841;
-  border-radius: 5px;
-}
-
-.button-post {
-  padding: 10px;
-  border: 1px solid #f5c5c5;
-  border-radius: 15px;
-  width: 220px;
-  margin: 0px 13%;
-  box-shadow: 1px 1px 1px #d83f3d;
-  background-color: red;
-  cursor: pointer;
-  color: white;
-}*/
 /* ------------------------ FORMULAIRE ------------------------------- */
 form {
   color: #2e3841;
   background-color: white;
   padding: 10px;
- 
+
   border-radius: 5px;
 }
 
@@ -484,10 +449,6 @@ input {
   color: white;
 }
 
-/*.title-comment h2 {
-  color: #2e3841;
-}*/
-
 .comment_article {
   background-color: #fff;
   text-align: center;
@@ -496,42 +457,24 @@ input {
   padding: 5px;
   width: 350px;
 }
+span {
+  text-align: center;
+}
 .supprime,
 .designale {
   padding: 10px;
   border: 1px solid #f5c5c5;
   border-radius: 15px;
-  width: 250px;
+  text-align: center;
   box-shadow: 1px 1px 1px #d83f3d;
   background-color: red;
   cursor: pointer;
   color: white;
 }
 
-#comments{
-  margin: 0;
-  
- }*/
-/*.author-comment {
-  padding: 3px;
-  border: 1px solid #f5c5c5;
-  border-radius: 5px;
-  width: 30%;
-  box-shadow: 1px 1px 2px #c0c0c0 inset;
+.comment {
+  text-align: center;
 }
-
-.date-comment {
-  margin: 10px;
-
-  padding: 3px;
-  border: 1px solid #f5c5c5;
-  border-radius: 5px;
-  width: 280px;
-  box-shadow: 1px 1px 2px #c0c0c0 inset;
-}
-*/
-
-
 
 .profil {
   background-color: #fff;
@@ -546,14 +489,6 @@ input {
   margin: auto;
 }
 /* ------------------------ user table------------------------------- */
-/*.commentaire_signale {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.connected {
-  visibility: hidden;
-}*/
 
 table {
   border-collapse: collapse;

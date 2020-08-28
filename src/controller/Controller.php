@@ -4,25 +4,16 @@ namespace App\src\controller;
 
 use App\config\Request;
 use App\src\constraint\Validation;
-use App\src\Manager
-\ArticleManager
-;
-use App\src\Manager
-\CommentManager
-;
-use App\src\Manager
-\UserManager
-;
+use App\src\Manager\ArticleManager;
+use App\src\Manager\CommentManager;
+use App\src\Manager\UserManager;
 use App\src\model\View;
 
 abstract class Controller
 {
-    protected $articleManager
-    ;
-    protected $commentManager
-    ;
-    protected $userManager
-    ;
+    protected $articleManager;
+    protected $commentManager;
+    protected $userManager;
     protected $view;
     private $request;
     protected $get;
@@ -33,14 +24,11 @@ abstract class Controller
     public function __construct()
     {
         $this->articleManager
-         = new ArticleManager
-        ();
+            = new ArticleManager();
         $this->commentManager
-         = new CommentManager
-        ();
+            = new CommentManager();
         $this->userManager
-         = new UserManager
-        ();
+            = new UserManager();
         $this->view = new View();
         $this->validation = new Validation();
         $this->request = new Request();

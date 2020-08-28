@@ -23,19 +23,17 @@ class ArticleManager extends Manager
     {
         $sql = 'SELECT article.id, article.title, article.content, user.pseudo, article.createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC LIMIT 0, 4';
         $result = $this->createQuery($sql);
-        
-        $articles = [];
-        
-        
 
-        foreach ($result as $row){
+        $articles = [];
+
+
+
+        foreach ($result as $row) {
             $articleId = $row['id'];
             $articles[$articleId] = $this->buildObject($row);
         }
         $result->closeCursor();
         return $articles;
-        
-
     }
 
     public function getArticle($articleId)
@@ -46,7 +44,7 @@ class ArticleManager extends Manager
         $result->closeCursor();
         return $this->buildObject($article);
     }
-    
+
 
     public function addArticle(Parameter $post, $userId)
     {

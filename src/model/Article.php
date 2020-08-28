@@ -77,7 +77,7 @@ class Article
         $this->content = $content;
     }
 
-    
+
 
     /**
      * @return string
