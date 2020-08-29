@@ -168,26 +168,6 @@ h2 {
   margin: auto;
 }
 /* ---------------------- Responsive Design ------------------------- */
-@media screen and (max-width: 426px) {
-  .add_article {
-    text-align: justify;
-    padding: ;
-    margin: auto;
-    width: 290px;
-  }
-  a{
-    display: none;
-  }
-  input{
-    width: 200px;
-  }
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (min-width: 1024px) {
-}
-@media screen and (min-width: 1440px) {
-}
 
 /* --------------------------- BIOGRAPHY --------------------------- */
 
@@ -497,6 +477,27 @@ span {
 }
 .login {
   margin: auto;
+}
+@media screen and (max-width: 426px) {
+  .add_article{
+    width: 250px;
+    padding: 0px;
+  }
+  input{
+    width: 180px;
+  }
+  .submit{
+    width: 200px;
+  }
+  .login, .register {
+    margin: 50px;
+  }
+ 
+  
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1440px) {
 }
 
 /* ------------------------ user table------------------------------- */
