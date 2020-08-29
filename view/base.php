@@ -24,10 +24,10 @@
 
                     ?>
 
-                        <?php if ($this->session->get('role') === 'admin') { ?>
-                            <li class="navc"><a href="../public/index.php?route=administration">Administration</a></li>
-                        <?php } ?>
-                        <?php echo  "  Bienvenue !  "; ?>
+                    <?php if ($this->session->get('role') === 'admin') { ?>
+                    <li class="navc"><a href="../public/index.php?route=administration">Administration</a></li>
+                    <?php } ?>
+                    <?php echo  "  Bienvenue !  "; ?>
                     <?php
                     } else {
                     ?>
@@ -53,18 +53,18 @@
                         if ($this->session->get('pseudo')) {
 
                         ?>
-                            <li><a href="../public/index.php?route=logout">Déconnexion</a></li>
-                            <li><a href="../public/index.php?route=profile">Profil</a></li>
-                            <?php if ($this->session->get('role') === 'admin') { ?>
-                                <li><a href="../public/index.php?route=administration">Administration</a></li>
-                            <?php } ?>
-                            <?php echo  "  Bienvenue !  "; ?>
+                        <li><a href="../public/index.php?route=logout">Déconnexion</a></li>
+                        <li><a href="../public/index.php?route=profile">Profil</a></li>
+                        <?php if ($this->session->get('role') === 'admin') { ?>
+                        <li><a href="../public/index.php?route=administration">Administration</a></li>
+                        <?php } ?>
+                        <?php echo  "  Bienvenue !  "; ?>
                         <?php
                         } else {
                         ?>
 
-                            <li><a href="../public/index.php?route=register">Inscription</a></li>
-                            <li><a href="../public/index.php?route=login">Connexion</a></li>
+                        <li><a href="../public/index.php?route=register">Inscription</a></li>
+                        <li><a href="../public/index.php?route=login">Connexion</a></li>
 
                         <?php
                         }
@@ -79,12 +79,13 @@
             <?= $content ?>
         </div>
     </div>
-    <footer>
-        <p>Copyright © Rachid Kasri - 2020. Tous droits réservés</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-1.11.3.js" integrity="sha256-IGWuzKD7mwVnNY01LtXxq3L84Tm/RJtNCYBfXZw3Je0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"
+        integrity="sha256-IGWuzKD7mwVnNY01LtXxq3L84Tm/RJtNCYBfXZw3Je0=" crossorigin="anonymous"></script>
     <script src="../public/js/app.js"></script>
     <!-- <script src="slider.js"></script> -->
 </body>
+<footer>
+    <p>Copyright © Rachid Kasri - 2020. Tous droits réservés</p>
+</footer>
 
 </html>

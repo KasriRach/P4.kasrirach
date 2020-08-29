@@ -14,7 +14,7 @@
     <?php
     foreach ($comments as $comment) {
     ?>
-        <div class="comment_article"><img src="../public/images/imgNEW1.jpg" alt="">
+        <div class="comment_article"><img src="../public/images/imgNEW1.jpg" alt="" width="100%">
             <h4><?= htmlspecialchars($comment->getPseudo()); ?></h4>
             <p><?= nl2br(htmlspecialchars_decode($comment->getContent())); ?></p>
             <p>Posté le <?= htmlspecialchars($comment->getCreatedAt()); ?></p><br>

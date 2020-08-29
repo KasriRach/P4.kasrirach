@@ -145,7 +145,6 @@ h2 {
   color: #2e3841;
 }
 .add_article {
-  float: left;
   text-align: justify;
   padding: 50px;
   margin: auto;
@@ -403,7 +402,7 @@ header {
   }
   .btn-navigation {
     right: 40px;
-    top: 10px;
+    top: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -417,7 +416,7 @@ header {
     display: none;
   }
 }
-/* ------------------------ bouton------------------------------- */
+
 /* ------------------------ FORMULAIRE ------------------------------- */
 form {
   color: #2e3841;
@@ -452,7 +451,7 @@ input {
   border-radius: 8px;
   border: 2px solid #969ca1;
   padding: 5px;
-  width: 350px;
+  width: 300px;
 }
 span {
   text-align: center;
@@ -485,6 +484,7 @@ span {
 .login {
   margin: auto;
 }
+
 /* ------------------------ user table------------------------------- */
 
 table {
