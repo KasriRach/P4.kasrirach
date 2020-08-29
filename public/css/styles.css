@@ -168,6 +168,20 @@ h2 {
   margin: auto;
 }
 /* ---------------------- Responsive Design ------------------------- */
+@media screen and (max-width: 426px) {
+  .add_article {
+    text-align: justify;
+    padding: ;
+    margin: auto;
+    width: 290px;
+  }
+  a{
+    display: none;
+  }
+  input{
+    width: 200px;
+  }
+}
 @media screen and (max-width: 768px) {
 }
 @media screen and (min-width: 1024px) {
