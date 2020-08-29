@@ -24,7 +24,7 @@
         <?= $this->session->show('login'); ?>
         <?= $this->session->show('logout'); ?>
         <?= $this->session->show('delete_account'); ?>
-
+  
 
     </div>
 

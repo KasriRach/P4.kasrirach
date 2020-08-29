@@ -12,7 +12,7 @@ h2 {
   color: #2e3841;
 }
 h1 {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 h3 {
   font-size: 1.3em;
@@ -151,9 +151,6 @@ h2 {
   margin: auto;
 }
 
-
-
-
 .news {
   background-color: #fff;
   text-align: center;
@@ -168,7 +165,7 @@ h2 {
 }
 .single {
   text-align: justify;
-  padding: 50px;
+  padding: 30px;
   margin: auto;
 }
 /* ---------------------- Responsive Design ------------------------- */
