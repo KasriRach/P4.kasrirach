@@ -7,8 +7,8 @@ $submit = $route === 'addComment' ? 'Ajouter' : 'Mettre à jour';
     <h1>Commentaire</h1>
     <form method="post"
         action="../public/index.php?route=<?= $route; ?>&articleId=<?= htmlspecialchars($article->getId()); ?>">
-        <input type="text" id="" name="" placeholder=""
-            value="<?= htmlspecialchars_decode($article->getTitle()); ?>"><br>
+        <!--<input type="text" id="" name="" placeholder=""
+            value="<?= htmlspecialchars_decode($article->getTitle()); ?>"><br>-->
         <br>
         <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo"
             value="<?= isset($post) ? htmlspecialchars($post->get('pseudo')) : ''; ?>"><br>
