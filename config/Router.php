@@ -59,6 +59,8 @@ class Router
                     $this->backController->deleteUser($this->request->getGet()->get('userId'));
                 } elseif ($route === 'administration') {
                     $this->backController->administration();
+                }elseif($route === 'chapitres'){
+                    $this->backController->chapitres();   
                 } else {
                     $this->errorController->errorNotFound();
                 }
@@ -70,3 +72,4 @@ class Router
         }
     }
 }
+

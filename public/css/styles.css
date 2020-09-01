@@ -167,6 +167,10 @@ h2 {
   padding: 30px;
   margin: auto;
 }
+.chapters{
+  text-align: justify;
+  margin-top: 30px;
+}
 /* ---------------------- Responsive Design ------------------------- */
 
 /* --------------------------- BIOGRAPHY --------------------------- */

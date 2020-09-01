@@ -18,6 +18,16 @@ class BackController extends Controller
             'users' => $users
         ]);
     }
+    public function chapitres()
+    {
+        $articles = $this->articleManager->getArticles();
+
+        return $this->view->render('chapitres', [
+            'articles' => $articles,
+            
+            
+        ]);
+    }
 
     public function addArticle(Parameter $post)
     {
@@ -25,7 +35,7 @@ class BackController extends Controller
             $errors = $this->validation->validate($post, 'Article');
             if (!$errors) {
                 $this->articleManager->addArticle($post, $this->session->get('id'));
-                $this->session->set('add_article', 'Le nouvel article a bien été ajouté');
+                $this->session->set('add_article', 'Le nouveau chapitre a bien été ajouté');
                 header('Location: ../public/index.php?route=administration');
             }
             return $this->view->render('add_article', [
@@ -43,7 +53,7 @@ class BackController extends Controller
             $errors = $this->validation->validate($post, 'Article');
             if (!$errors) {
                 $this->articleManager->editArticle($post, $articleId, $this->session->get('id'));
-                $this->session->set('edit_article', 'L\' article a bien été modifié');
+                $this->session->set('edit_article', 'Le chapitre a bien été modifié');
                 header('Location: ../public/index.php?route=administration');
             }
             return $this->view->render('edit_article', [
@@ -64,7 +74,7 @@ class BackController extends Controller
     public function deleteArticle($articleId)
     {
         $this->articleManager->deleteArticle($articleId);
-        $this->session->set('delete_article', 'L\' article a bien été supprimé');
+        $this->session->set('delete_article', 'Le chapitre a bien été supprimé');
         header('Location: ../public/index.php?route=administration');
     }
 

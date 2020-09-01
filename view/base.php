@@ -19,6 +19,7 @@
                 <ul>
                     <li class="billet"><a href="index.php"> Billet simple pour l'Alaska</a></li>
                     <li class="billet1"><a href="index.php"> Accueil</a></li>
+                    <a href="../public/index.php?route=chapitres">Chapitres</a>
                     <?php
                     if ($this->session->get('pseudo')) {
 
