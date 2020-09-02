@@ -38,9 +38,10 @@
         <br>
         <tr>
             <th>Id</th>
+            <th>Chapitre</th>
             <th>Pseudo</th>
+            <th>Commentaire</th>
             <th>Date</th>
-            <th>Rôle</th>
             <th>Actions</th>
         </tr>
         <?php
@@ -48,6 +49,7 @@
         ?>
             <tr>
                 <td><?= htmlspecialchars($comment->getId()); ?></td>
+                <td><?= htmlspecialchars($comment->getArticleId()); ?></td>
                 <td><?= htmlspecialchars($comment->getPseudo()); ?></td>
                 <td><?= substr(htmlspecialchars_decode($comment->getContent()), 0, 150); ?></td>
                 <td>Créé le : <?= htmlspecialchars($comment->getCreatedAt()); ?></td>

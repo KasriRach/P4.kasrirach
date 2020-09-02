@@ -19,7 +19,7 @@
                 <ul>
                     <li class="billet"><a href="index.php"> Billet simple pour l'Alaska</a></li>
                     <li class="billet1"><a href="index.php"> Accueil</a></li>
-                    <a href="../public/index.php?route=chapitres">Chapitres</a>
+                    <li class="billets"><a href="../public/index.php?route=chapitres">Chapitres</a></li>
                     <?php
                     if ($this->session->get('pseudo')) {
 
@@ -28,7 +28,7 @@
                     <?php if ($this->session->get('role') === 'admin') { ?>
                     <li class="navc"><a href="../public/index.php?route=administration">Administration</a></li>
                     <?php } ?>
-                    <?php echo  "  Bienvenue !  "; ?>
+                    
                     <?php
                     } else {
                     ?>

@@ -28,6 +28,10 @@ class Comment
      * @var bool
      */
     private $flag;
+     /**
+  * @var string
+  */
+    private $articleId;
 
     /**
      * @return int
@@ -64,17 +68,31 @@ class Comment
     /**
      * @return string
      */
-    public function getContent()
+    public function getArticleId()
     {
-        return $this->content;
+        return $this->articleId;
     }
 
     /**
-     * @param string $content
+     * @param string $articleId
      */
+    public function setArticleId($articleId)
+    {
+        $this->articleId = $articleId;
+    }
+      /**
+    * @return string
+    */
+    public function getContent()
+    {
+    return $this->content;
+    }
+    /**
+    * @param string $content
+    */
     public function setContent($content)
     {
-        $this->content = $content;
+    $this->content = $content;
     }
 
     /**
