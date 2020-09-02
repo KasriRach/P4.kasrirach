@@ -15,7 +15,6 @@ class CommentManager extends Manager
         $comment->setContent($row['content']);
         $comment->setCreatedAt($row['createdAt']);
         $comment->setFlag($row['flag']);
-        
         return $comment;
     }
 
@@ -34,10 +33,18 @@ class CommentManager extends Manager
 
     public function addComment(Parameter $post, $articleId)
     {
-        $sql = 'INSERT INTO comment (pseudo, content, createdAt, flag, articleId) VALUES (?, ?, NOW(), ?, ?)';
-        $this->createQuery($sql, [$post->get('pseudo'), $post->get('content'), 0, $articleId]);
+        //$sql = 'INSERT INTO comment (pseudo, content, createdAt, flag, articleId) VALUES (?, ?, NOW(), ?, ?)';
+        //$this->createQuery($sql, [$post->get('pseudo'), $post->get('content'), 0, $articleId]);
+    
+    $data = [
+        'pseudo' => $post->get('pseudo'),
+        'content' => $post->get('content'),
+        'flag' => 0,
+        'articleId' => $articleId,
+    ];
+    $sql = 'INSERT INTO comment (pseudo, content, createdAt, flag, articleId) VALUES (:pseudo, :content, NOW(), :flag, :articleId)';
+    $this->createQuery($sql, $data);
     }
-
     public function flagComment($commentId)
     {
         $sql = 'UPDATE comment SET flag = ? WHERE id = ?';
