@@ -61,7 +61,7 @@
                     <a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer
                         le commentaire</a>
                 </td>
-                <td><?= htmlspecialchars($article->getId()); ?></td>
+                <td><?= htmlspecialchars($article->getTitle()); ?></td>
             </tr>
         <?php
         }
